@@ -1,0 +1,128 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(60, 58, 58);
+}
+.wrapper{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    /* background-color: rgb(245, 233, 245); */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: colorful 30s linear infinite;
+}
+
+@keyframes colorful {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* .bar-sections span{
+    position: absolute;
+    transform: rotate(calc(var(--index)*6deg));
+    inset: 10px;
+}
+.bar-sections span p{
+    width: 3px;
+    height: 10px;
+    background-color: red;
+} */
+.number-hours{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    border-radius: 50%;
+
+}
+.number-hours span{
+    position: absolute;
+    transform: rotate(calc(var(--index)*30deg));
+    inset: 6px;
+    text-align: center;
+}
+.number-hours span p{
+    font-size: 50px;
+    transform: rotate(calc(var(--index)*-30deg));
+    color: aqua;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-shadow: 0 0 10px aqua;
+}
+.hands-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    text-align: center;
+}
+.hands-box .hours{
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border-radius: 50%;
+}
+.hands-box .hours::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    z-index: 100;
+}
+.hands-box .hours i{
+    height: 145px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: aqua;
+    box-shadow: 0 0 10px aqua;
+
+    display: inline-block;
+    /* transform: rotate(290deg); */
+    transform-origin: bottom;
+}
+.hands-box .minutes{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    
+}
+.hands-box .minutes i{
+    height: 175px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: aqua;
+    box-shadow: 0 0 10px aqua;
+    display: inline-block;
+    /* transform: rotate(150deg); */
+    transform-origin: bottom;
+    z-index: 1;
+}
+.hands-box .seconds{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    /* transform: rotate(90deg); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+
+}
+.hands-box .seconds i{
+    height: 220px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+    transform-origin: bottom;
+}
